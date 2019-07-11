@@ -163,13 +163,13 @@ export function RouteComponent(props) {
             // 或
             <Route exact path='/b' render={
               (props) => {
-                let Comp = getCacheRoute('/b', asyncComponent(() => import('../pages/b')))
+                let Comp = getCachedComponent('/b', asyncComponent(() => import('../pages/b')))
                 return React.createElement(Comp, props)
               }
             }/>
             <Route exact path='/bb' render={
               (props) => {
-                let Comp = getCacheRoute('/bb', asyncComponent(() => import('../pages/bb')))
+                let Comp = getCachedComponent('/bb', asyncComponent(() => import('../pages/bb')))
                 return React.createElement(Comp, props)
               }
             }/>
