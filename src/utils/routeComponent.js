@@ -12,7 +12,7 @@ function getCachedComponent(key, Component) {
   if (!cachedComponent[key]) {
     cachedComponent[key] = Component
   }
-  
+
   return cachedComponent[key]
 }
 
@@ -25,7 +25,7 @@ function getRoute(fullPath, app, route, parentRoute ) {
       render={
         (props) => {
           return getCachedComponent(
-            fullPath, //props.match.url, 
+            props.match.url, 
             getComponent( app, route, parentRoute, props )
           )
         }
