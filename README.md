@@ -1,5 +1,6 @@
 ## dva + react-router-cache-route 多标签页项目demo
 
+### 问题
 目前还有几个问题没解决
 
 ```
@@ -8,3 +9,7 @@
 3. 如何限制tabs打开的个数 ?
 4. 如果支持一个路由或页面打开多次, namespace该如何注册和切换 ?
 ```
+
+### react-router-cache-route
+
+github地址: https://github.com/CJY0208/react-router-cache-route
