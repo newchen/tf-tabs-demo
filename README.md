@@ -13,6 +13,8 @@
 ### 对外提供的方法
 
 ```
+import { getRealNS, getTitle, getCount, connect, unload, refresh, RouteComponent } from '@/utils/'
+
 // 如果是/user/:id形式的路由, 可能会用到该方法, 获取当前真实的namespace
 getRealNS(ns)
 
