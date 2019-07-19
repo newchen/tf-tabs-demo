@@ -11730,6 +11730,17 @@ text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+tf-tabs-cache@^0.1.3:
+  version "0.1.3"
+  resolved "http://10.77.0.105:4873/tf-tabs-cache/-/tf-tabs-cache-0.1.3.tgz#c9189774d3659238fe17514e9356fef1738e36e2"
+  integrity sha512-CMZfM+lxE+lmU+/WBtH8wT8VvU+S1WuK3UW1SoMiDClLONGTS1pL/doJFAOttclw+yxYkCPhIoddh4Q39/ezXA==
+  dependencies:
+    dva "^2.4.1"
+    dva-model-extend "^0.1.2"
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    react-router-cache-route "^1.4.6"
+
 throat@^4.0.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"

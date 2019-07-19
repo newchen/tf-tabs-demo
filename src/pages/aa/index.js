@@ -2,7 +2,7 @@ import React from 'react';
 // import { connect } from 'dva';
 import { Link } from 'dva/router'
 import { Input, Button } from 'antd'
-import { connect, getTitle, refresh, unload } from '@/utils/'
+import { connect, getTitle, refresh, unload } from 'tf-tabs-cache'
 
 const AA = (props) => {
   let { dispatch } = props;
