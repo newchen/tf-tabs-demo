@@ -13,7 +13,7 @@ export default {
       let data = yield call(fetchInit, payload)
 
       yield put({
-        type: 'upadte',
+        type: 'update',
         payload: { init: data.data }
       })
     },
@@ -21,14 +21,15 @@ export default {
       let data = yield call(fetchName);
       
       yield put({
-        type: 'upadte',
+        type: 'update',
         payload: { name: data.data }
       })
     }
   },
 
   reducers: {
-    upadte(state, { payload }) {
+    update(state, { payload }) {
+      console.log('app update', payload)
       return { ...state, ...payload }
     }
   },

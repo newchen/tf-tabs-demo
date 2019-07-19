@@ -1,5 +1,5 @@
 import React from 'react';
-import {RouteComponent} from '@/utils/routeComponent'
+import {RouteComponent} from '@/utils/'
 import config from './config/route'
 
 function RouterConfig({ history, app }) {
