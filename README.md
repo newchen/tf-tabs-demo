@@ -23,7 +23,7 @@ getTitle(url)
 // 当前已经打开了多少个tabs页面
 getCount()
 
-// 使用方式和react-redux的connect方法一致
+// 使用方式和react-redux的connect方法一致, 如果是/user/:id形式的路由, 请使用该方法
 connect(xx)(xx)
 
 // 卸载url页面
