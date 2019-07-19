@@ -2,18 +2,88 @@
 
 import React from 'react';
 import { Router/*, Route, Switch*/, Redirect } from 'react-router-dom'
-import Route, { CacheSwitch as Switch } from 'react-router-cache-route'
-import dynamic from 'dva/dynamic'
+// import { Router/*, Route, Switch*/, Redirect } from 'react-router-dom'
+import Route, { CacheSwitch as Switch, dropByCacheKey } from 'react-router-cache-route'
+import dynamic from './dynamic'
+import pathToRegexp from 'path-to-regexp'
+import MultiComponent from './MultiComponent'
 
-const cachedComponent = {} // 缓存的组件
+const _cached = {} // 缓存: 组件, 对应的path
 
-// 是否有缓存, 有缓存取缓存的
-function getCachedComponent(key, Component) {
-  if (!cachedComponent[key]) {
-    cachedComponent[key] = Component
+// 删除缓存的组件
+export function dropCachedByUrl(url) {
+  let obj = getAlinkUrl(url)
+
+  if (obj.count === 1
+    && obj.path) {
+    dropByCacheKey(obj.path)
   }
 
-  return cachedComponent[key]
+  _cached[url] = null;
+  delete _cached[url]
+}
+
+// 已经载入了多少个页面
+export function getCount() {
+  return Object.keys(_cached).length
+}
+
+// 相似的url数
+export function getAlinkUrl(url) {
+  let count = 0;
+  if (! _cached[url]) return { count }
+
+  let { path: curPath } =  _cached[url]
+
+  for(let i in _cached) {
+    let { path } = _cached[i]
+
+    if (curPath === path) {
+      count++
+    }
+  }
+
+  return { count, path: curPath };
+}
+
+// 是否有缓存, 有缓存取缓存的
+function getCachedComponent(match, Component) {
+  let { url, path } = match;
+
+  if (!_cached[url]) {
+    _cached[url] = { Component, path }
+  }
+
+  // 这种路由: /user/:id
+  if (url !== path) {
+    let arr = [];
+
+    for(let key in _cached) {
+      let regexp = pathToRegexp(path)
+
+      if (regexp.exec(key)) {
+        let style = {}
+
+        if (url !== key) {
+          style = { display: 'none' }
+        }
+
+        arr.push(
+          React.createElement(
+            MultiComponent, 
+            { key, style }, 
+            _cached[key].Component
+          )
+        )
+      }
+    }
+
+    if (arr.length > 0) {
+      return arr;
+    }
+  }
+
+  return _cached[url].Component
 }
 
 function getRoute(fullPath, app, route, parentRoute ) {
@@ -22,10 +92,11 @@ function getRoute(fullPath, app, route, parentRoute ) {
       when="always"
       key={fullPath} 
       path={fullPath} 
+      cacheKey={fullPath}
       render={
         (props) => {
           return getCachedComponent(
-            props.match.url, 
+            props.match, 
             getComponent( app, route, parentRoute, props )
           )
         }
@@ -41,12 +112,18 @@ function getComponent( app, route, parentRoute, props ) {
     models: parentModels = [] 
   } = parentRoute
 
+  // index表示从哪个位置开始是当前model
+  let extra = { ...route, ...props, index: 0 }
+
   if (parentComponent) {
+    extra.index = parentModels.length;
+
     return (
       parentComponent // 这里是重点
         .concat(React.createElement(
           dynamic({
             app,
+            extra,
             // 注意: 这里直接全量加载所有需要的model, 而不是按需只加载当前页面的model, 因为这样的话, 页面执行的时候会报错(父组件的model这时候还没加载执行)
             models: () => {
               return [...parentModels, ...models].map(item => item()) 
@@ -67,7 +144,8 @@ function getComponent( app, route, parentRoute, props ) {
       React.createElement(
         dynamic({
           app,
-          models,
+          extra,
+          models: () => models.map(v => v()),
           component
         }),
         props

@@ -2068,7 +2068,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.x, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.20.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -3857,6 +3857,13 @@ dva-loading@^3.0.10:
   integrity sha512-Vc6HGjbPNV5DDxhF9HQLVEvBQSkrcb0QmyonvP8TLukrJ2jD+VMZhB7gyijdfKT2yRvykVU0krH7VtTlVVtMcQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
+
+dva-model-extend@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/dva-model-extend/-/dva-model-extend-0.1.2.tgz#a3e615995feaaed5d141eb5b0a26cb98542a9820"
+  integrity sha512-pS/b6UmAN9+3ozLWodwvrZnopoSw29fV435i87QZ7jb/cbqAILzfa04mfOqd9k8SNXCiwZUX3pMmm1cOA81yxA==
+  dependencies:
+    babel-runtime "^6.20.0"
 
 dva@^2.4.1:
   version "2.4.1"

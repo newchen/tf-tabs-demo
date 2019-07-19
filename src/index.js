@@ -1,6 +1,7 @@
 import dva from 'dva'
 import createLoading from 'dva-loading';
-import history from '@/utils/history'
+import history from './history'
+import dynamicNS from '@/utils/dynamicNS'
 
 let app = dva({
   history, 
@@ -8,6 +9,8 @@ let app = dva({
   onError(e) {
     console.error('onError', e.message);
   },
+
+  onAction: dynamicNS()
 })
 
 app.use(createLoading())

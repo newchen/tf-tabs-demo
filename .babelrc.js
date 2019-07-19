@@ -1,4 +1,4 @@
-// https://babeljs.io/docs/en/configuration
+// https://babeljs.io/docs/en/plugins
 
 module.exports = {
   // presets: ["@babel/preset-env", "@babel/react"],
