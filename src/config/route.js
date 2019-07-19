@@ -1,5 +1,3 @@
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
-
 export default [
   // BasicLayout布局
   {
