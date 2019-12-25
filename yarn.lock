@@ -9549,6 +9549,15 @@ query-string@^6.4.0:
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
 
+query-string@^6.9.0:
+  version "6.9.0"
+  resolved "http://10.77.0.105:4873/query-string/-/query-string-6.9.0.tgz#1c3b727c370cf00f177c99f328fda2108f8fa3dd"
+  integrity sha512-KG4bhCFYapExLsUHrFt+kQVEegF2agm4cpF/VNc6pZVthIfCc/GK8t8VyNIE3nyXG9DK3Tf2EGkxjR6/uRdYsA==
+  dependencies:
+    decode-uri-component "^0.2.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.npmjs.org/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -10171,6 +10180,11 @@ react-router-cache-route@^1.4.6:
   version "1.4.6"
   resolved "https://registry.npmjs.org/react-router-cache-route/-/react-router-cache-route-1.4.6.tgz#b37b6681f7f683f95c0ae815650e9e75ae7681eb"
   integrity sha512-ZGnRKcVwFJb1s/8YWYouoOnxJFOxqw1Fjmv7lp/I6816o1aOm1FnUZpATx9ZoQmBi71ClQdJzFxFQd801CjNBA==
+
+react-router-cache-route@^1.8.4:
+  version "1.8.4"
+  resolved "http://10.77.0.105:4873/react-router-cache-route/-/react-router-cache-route-1.8.4.tgz#57523803f14edd1e04c2de951451d97c5d27c971"
+  integrity sha512-cj84gIDqQdNMMKVFD66V4Tc2FKEEq5DvARFpyEbrrBFWn54HsVkZxFRsjkgVZtTNiYqXSp7pP0N8tuoHEtUj6Q==
 
 react-router-dom@^4.1.2:
   version "4.3.1"
@@ -11730,16 +11744,17 @@ text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-tf-tabs-cache@^0.1.3:
-  version "0.1.3"
-  resolved "http://10.77.0.105:4873/tf-tabs-cache/-/tf-tabs-cache-0.1.3.tgz#c9189774d3659238fe17514e9356fef1738e36e2"
-  integrity sha512-CMZfM+lxE+lmU+/WBtH8wT8VvU+S1WuK3UW1SoMiDClLONGTS1pL/doJFAOttclw+yxYkCPhIoddh4Q39/ezXA==
+tf-tabs-cache@^0.1.5-beta:
+  version "0.1.5-beta"
+  resolved "http://10.77.0.105:4873/tf-tabs-cache/-/tf-tabs-cache-0.1.5-beta.tgz#e07a75d11ca0166393b21385dc607f302b69982f"
+  integrity sha512-PQ/+5nEpBqBnIDvV1cOyKuVGrMh8z3jYq43kunkvvPTskMzPIhcN8+wX3hgTAlrE/xyoUMzeHVCyXVhzcs9iFQ==
   dependencies:
     dva "^2.4.1"
     dva-model-extend "^0.1.2"
+    query-string "^6.9.0"
     react "^16.8.6"
     react-dom "^16.8.6"
-    react-router-cache-route "^1.4.6"
+    react-router-cache-route "^1.8.4"
 
 throat@^4.0.0:
   version "4.1.0"

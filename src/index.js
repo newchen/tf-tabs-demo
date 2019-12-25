@@ -1,7 +1,7 @@
 import dva from 'dva'
 import createLoading from 'dva-loading';
 import history from './history'
-import { dynamicNS } from 'tf-tabs-cache'
+import { dynamicNS } from '@/lib.js'
 
 let app = dva({
   history, 

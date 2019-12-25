@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'dva/router'
 import { Input, Button } from 'antd'
 // import { connect } from 'dva'
-import { connect, getTitle, refresh, unload } from 'tf-tabs-cache'
+import { connect, getTitle, refresh, unload } from '@/lib.js'
 
 function BB(props) {
   console.log('bb页面', props)
