@@ -6548,9 +6548,9 @@ js-tokens@^3.0.2:
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
 js-yaml@^3.12.0, js-yaml@^3.13.1, js-yaml@^3.7.0:
-  version "3.13.1"
-  resolved "https://registry.npmjs.org/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
-  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
+  version "3.14.2"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.2.tgz#77485ce1dd7f33c061fd1b16ecea23b55fcb04b0"
+  integrity sha512-PMSmkqxr106Xa156c2M265Z+FTrPl+oxd/rgOQy2tijQeK5TxQ43psO1ZCwhVOSdnn+RzkzlRz/eY4BgJBYVpg==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -11744,10 +11744,10 @@ text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-tf-tabs-cache@^0.1.5-beta:
-  version "0.1.5-beta"
-  resolved "http://10.77.0.105:4873/tf-tabs-cache/-/tf-tabs-cache-0.1.5-beta.tgz#e07a75d11ca0166393b21385dc607f302b69982f"
-  integrity sha512-PQ/+5nEpBqBnIDvV1cOyKuVGrMh8z3jYq43kunkvvPTskMzPIhcN8+wX3hgTAlrE/xyoUMzeHVCyXVhzcs9iFQ==
+tf-tabs-cache@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/tf-tabs-cache/-/tf-tabs-cache-0.1.5.tgz#f76e9ef42c5d90dd499d18a0e88e5fe68df94aac"
+  integrity sha512-vl0/21uNkXQwrjpiLwGkHCc6+5lUq4gxXD1zzLIispAz9MEbutJgJdAKx/8Xiyny8IX5+yHcIZpEdSH43YfBqw==
   dependencies:
     dva "^2.4.1"
     dva-model-extend "^0.1.2"
