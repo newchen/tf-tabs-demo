@@ -3643,9 +3643,9 @@ dezalgo@^1.0.0, dezalgo@~1.0.3:
     wrappy "1"
 
 diff@^3.2.0:
-  version "3.5.0"
-  resolved "https://registry.npmjs.org/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
-  integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.1.tgz#e7fae480379d2e944c68ff0f5e1c29b6e28c77ab"
+  integrity sha512-Z3u54A8qGyqFOSr2pk0ijYs8mOE9Qz8kTvtKeBI+upoG9j04Sq+oI7W8zAJiQybDcESET8/uIdHzs0p3k4fZlw==
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
@@ -11744,10 +11744,10 @@ text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-tf-tabs-cache@^0.1.5-beta:
-  version "0.1.5-beta"
-  resolved "http://10.77.0.105:4873/tf-tabs-cache/-/tf-tabs-cache-0.1.5-beta.tgz#e07a75d11ca0166393b21385dc607f302b69982f"
-  integrity sha512-PQ/+5nEpBqBnIDvV1cOyKuVGrMh8z3jYq43kunkvvPTskMzPIhcN8+wX3hgTAlrE/xyoUMzeHVCyXVhzcs9iFQ==
+tf-tabs-cache@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/tf-tabs-cache/-/tf-tabs-cache-0.1.5.tgz#f76e9ef42c5d90dd499d18a0e88e5fe68df94aac"
+  integrity sha512-vl0/21uNkXQwrjpiLwGkHCc6+5lUq4gxXD1zzLIispAz9MEbutJgJdAKx/8Xiyny8IX5+yHcIZpEdSH43YfBqw==
   dependencies:
     dva "^2.4.1"
     dva-model-extend "^0.1.2"
